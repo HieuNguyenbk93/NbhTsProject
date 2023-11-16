@@ -1,25 +1,30 @@
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {ScreenName} from '../../utils/constant';
+import {AppBackgroundView, AppText} from '../../components';
+import generalStyles from '../../utils/styles';
 
 const HomeScreen = ({navigation}) => {
   return (
-    <View style={styles.container}>
-      <Text>HomeScreen</Text>
-      <Button
-        title="Go to Profile"
-        onPress={() => navigation.navigate(ScreenName.profile)}
-      />
-    </View>
+    <AppBackgroundView>
+      <View style={[generalStyles.container, styles.bgWhite]}>
+        <AppText>HomeScreen</AppText>
+        <Button
+          title="Go to Profile"
+          onPress={() => navigation.navigate(ScreenName.profile)}
+        />
+      </View>
+    </AppBackgroundView>
   );
 };
 
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  bgWhite: {
+    // flex: 1,
+    backgroundColor: 'white',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 });
