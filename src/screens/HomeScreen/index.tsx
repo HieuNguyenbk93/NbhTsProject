@@ -3,11 +3,13 @@ import React from 'react';
 import {ScreenName} from '../../utils/constant';
 import {AppBackgroundView, AppText} from '../../components';
 import generalStyles from '../../utils/styles';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const HomeScreen = ({navigation}) => {
   return (
     <AppBackgroundView>
       <View style={[generalStyles.container, styles.bgWhite]}>
+        <AntDesign name="pluscircle" color="blue" size={30} />
         <AppText>HomeScreen</AppText>
         <Button
           title="Go to Profile"
