@@ -2,6 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import HomeNavigation from '../../navigation/homeNavigation';
 import AuthNavigation from '../../navigation/authNavigation';
+import {GlobalStateProvider} from '../../state/GlobalStateContext';
 
 const MainScreen = () => {
   const render = () => {
@@ -11,7 +12,11 @@ const MainScreen = () => {
       return <AuthNavigation />;
     }
   };
-  return <NavigationContainer>{render()}</NavigationContainer>;
+  return (
+    <NavigationContainer>
+      <GlobalStateProvider>{render()}</GlobalStateProvider>
+    </NavigationContainer>
+  );
 };
 
 export default MainScreen;

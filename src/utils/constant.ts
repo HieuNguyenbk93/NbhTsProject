@@ -4,4 +4,5 @@ export const ScreenName = {
   appIntro: 'AppIntro',
   home: 'Home',
   profile: 'Profile',
+  map: 'Map',
 };

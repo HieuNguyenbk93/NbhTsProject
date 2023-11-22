@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {ScreenName} from '../utils/constant';
-import {HomeScreen, ProfileScreen} from '../screens';
+import {HomeScreen, MapScreen, ProfileScreen} from '../screens';
 
 const HomeStackNavigation = createNativeStackNavigator();
 
@@ -15,6 +15,7 @@ const HomeStack = () => (
       name={ScreenName.profile}
       component={ProfileScreen}
     />
+    <HomeStackNavigation.Screen name={ScreenName.map} component={MapScreen} />
   </HomeStackNavigation.Navigator>
 );
 

@@ -4,6 +4,7 @@ import AppIntroScreen from './AppIntroScreen';
 
 import HomeScreen from './HomeScreen';
 import ProfileScreen from './ProfileScreen';
+import MapScreen from './MapScreen';
 
 export {
   AppIntroScreen,
@@ -11,4 +12,5 @@ export {
   AuthSignUpScreen,
   HomeScreen,
   ProfileScreen,
+  MapScreen,
 };
